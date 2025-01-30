@@ -1,2 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 @import "tailwindcss";
 @plugin "daisyui";
+
+html {
+  font-family: "Inter", serif;
+}
+.shape {
+  clip-path: polygon(100% 0, 100% 72%, 0 99%, 0 0);
+}
+.picture-shape {
+  clip-path: polygon(62% 0, 100% 0, 100% 100%, 16% 100%);
+}
+.mobile-shape {
+  clip-path: polygon(0 24%, 100% 0%, 100% 84%, 0% 100%);
+}
