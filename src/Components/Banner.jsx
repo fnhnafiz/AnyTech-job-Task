@@ -3,7 +3,7 @@ const Banner = () => {
     <div className="relative shape min-h-screen bg-gradient-to-br from-[#00D0FF] via-[#0066FF] to-[#0262E6] flex flex-col lg:flex-row items-center pt-20">
       <img
         className="absolute -top-3 right-0 z-10 w-full"
-        src="/public/backgrounds/icon.svg"
+        src="../public/backgrounds/icon.svg"
         alt=""
       />
 
