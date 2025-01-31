@@ -1,30 +1,57 @@
 import { MdLanguage } from "react-icons/md";
 import navLogo from "../../public/icons/easy-banking/navlogo.svg";
+import navbarLogoBlue from "../../public/icons/easy-banking/navbarLogoBlue.svg";
 import { FiChevronDown, FiChevronRight } from "react-icons/fi";
+import { useState } from "react";
+import { useEffect } from "react";
+import clsx from "clsx";
+import { IoClose, IoMenu } from "react-icons/io5";
 
 const Navbar = () => {
+  const [menuBar, setMenuBar] = useState(false);
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolling(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <nav className="w-full absolute z-10 px-12 py-8">
+    <nav
+      className={clsx(
+        "w-full fixed top-0 left-0 z-50 px-6 py-4 md:px-12 md:py-6 transition-all",
+        scrolling ? "bg-white shadow-md" : "bg-transparent "
+      )}
+    >
       <div className="flex justify-between items-center">
         {/* Logo */}
         <div>
-          <img className="w-32" src={navLogo} alt="" />
+          {scrolling ? (
+            <>
+              <img className="w-32" src={navbarLogoBlue} alt="Logo" />
+            </>
+          ) : (
+            <>
+              <img className="w-32" src={navLogo} alt="Logo" />
+            </>
+          )}
         </div>
-        {/* Center Item */}
-        <div className="flex gap-10 items-center">
-          {/* Dropdown */}
-          <div className="dropdown dropdown-hover ">
+
+        {/* Center Items - Desktop */}
+        <div className="hidden md:flex gap-10 items-center">
+          <div className="dropdown dropdown-hover">
             <div
               tabIndex={0}
               role="button"
-              className="text-white m-1 flex items-center "
+              className={` m-1 flex items-center ${
+                scrolling ? "text-blue-500" : "text-white"
+              }`}
             >
               Solutions <FiChevronDown className="text-lg" />
             </div>
-            <ul
-              tabIndex={0}
-              className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
-            >
+            <ul className="dropdown-content menu bg-base-100 rounded-box z-10 w-52 p-2 shadow-sm">
               <li className="border-b border-b-gray-100">
                 <a>AnyCaaS</a>
               </li>
@@ -36,42 +63,90 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          {/* end drop down */}
-          <div>
-            <span className="text-white">Contact Us</span>
-          </div>
-          <div>
-            <span className="text-white">About Us</span>
-          </div>
-          <div>
-            <div className="dropdown dropdown-hover">
-              <button
-                tabIndex={0}
-                className="m-1 flex items-center gap-2 border border-white text-white  px-4 py-2 rounded-full"
-              >
-                <MdLanguage className="text-xl" />
-                <span>EN</span>
-                <FiChevronDown className="text-lg" />
-              </button>
-
-              <ul
-                tabIndex={0}
-                className="dropdown-content menu bg-white text-black rounded-md shadow-md w-32 p-2"
-              >
-                <li>
-                  <a>Hindi</a>
-                </li>
-                <li>
-                  <a>Arabic</a>
-                </li>
-              </ul>
-            </div>
+          <span className={`${scrolling ? "text-blue-500" : "text-white"}`}>
+            Contact Us
+          </span>
+          <span className={`${scrolling ? "text-blue-500" : "text-white"}`}>
+            About Us
+          </span>
+          <div className="dropdown dropdown-hover">
+            <button
+              className={`flex items-center gap-2 border px-4 py-2 rounded-full ${
+                scrolling
+                  ? "border-blue text-blue-500 "
+                  : " border-white text-white"
+              }`}
+            >
+              <MdLanguage className="text-xl" />
+              <span className={`${scrolling ? "text-blue-500" : "text-white"}`}>
+                EN
+              </span>
+              <FiChevronDown className="text-lg" />
+            </button>
+            <ul className="dropdown-content menu bg-white text-blue-500 rounded-md shadow-md w-32 p-2">
+              <li>
+                <a>Hindi</a>
+              </li>
+              <li>
+                <a>Arabic</a>
+              </li>
+            </ul>
           </div>
         </div>
-        {/* btn */}
-        <button className="flex items-center gap-2 font-semibold  border border-white text-white px-6 py-2 rounded-lg transition-all duration-300 hover:bg-white hover:text-blue-500 hover:shadow-lg">
+
+        {/* Contact Us Button - Desktop */}
+        <button
+          className={`hidden md:flex items-center gap-2 font-semibold border  px-6 py-2 rounded-lg transition-all hover:bg-black hover:text-white ${
+            scrolling ? "bg-orange-500 text-white" : "border-white text-white"
+          }`}
+        >
           Contact Us <FiChevronRight />
         </button>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setMenuBar(true)}
+          className="md:hidden text-3xl text-black"
+        >
+          <IoMenu />
+        </button>
+      </div>
+
+      {/* Sidebar Menu for Mobile */}
+      <div
+        className={clsx(
+          "fixed h-full w-screen bg-black/50 backdrop-blur-sm top-0 right-0 -translate-x-full transition-all z-50",
+          menuBar && "translate-x-0"
+        )}
+      >
+        <section className="text-black bg-white flex flex-col absolute left-0 top-0 h-screen p-8 gap-8 w-64">
+          <IoClose
+            onClick={() => setMenuBar(false)}
+            className="text-4xl cursor-pointer"
+          />
+          <ul className="flex flex-col gap-6">
+            <li>
+              <a className="hover:text-orange-500 font-semibold" href="#">
+                Home
+              </a>
+            </li>
+            <li>
+              <a className="hover:text-orange-500 font-semibold" href="#">
+                Solutions
+              </a>
+            </li>
+            <li>
+              <a className="hover:text-orange-500 font-semibold" href="#">
+                Contact Us
+              </a>
+            </li>
+            <li>
+              <a className="hover:text-orange-500 font-semibold" href="#">
+                About Us
+              </a>
+            </li>
+          </ul>
+        </section>
       </div>
     </nav>
   );

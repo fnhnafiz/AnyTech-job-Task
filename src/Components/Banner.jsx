@@ -1,6 +1,6 @@
 const Banner = () => {
   return (
-    <div className="relative shape min-h-screen bg-gradient-to-br from-[#00D0FF] via-[#0066FF] to-[#0262E6] flex flex-col lg:flex-row items-center pt-20">
+    <div className="relative shape min-h-screen bg-gradient-to-br from-[#00D0FF] via-[#0066FF] to-[#0262E6] flex flex-col lg:flex-row items-center pt-20 overflow-hidden">
       <img
         className="absolute -top-3 right-0 z-10 w-full"
         src="../public/backgrounds/icon.svg"
@@ -9,7 +9,7 @@ const Banner = () => {
 
       <div className="max-w-2xl z-10 flex justify-center items-center">
         <div className="space-y-8 pl-12">
-          <h1 className="text-7xl font-bold text-white">
+          <h1 className="text-3xl sm:text-7xl font-bold text-white">
             Embrace the future of finance
           </h1>
           <p className="text-lg font-semibold text-white">

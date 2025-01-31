@@ -17,3 +17,10 @@ body {
 .mobile-shape {
   clip-path: polygon(0 24%, 100% 0%, 100% 84%, 0% 100%);
 }
+.contact-shape {
+  clip-path: polygon(0 0, 100% 48%, 100% 100%, 0% 100%);
+  background-image: url("../public/backgrounds/icon.svg");
+}
+.contact-shape-bg {
+  clip-path: polygon(0 0, 100% 48%, 100% 100%, 0% 100%);
+}

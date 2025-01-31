@@ -41,7 +41,7 @@ const TechnologyBuilt = () => {
         subHeading="TECHNOLOGY BUILT FOR YOU"
         heading="The future of finance"
       ></SectionTitle>
-      <div className="flex items-center justify-between  mx-auto py-12 px-4 flex-wrap gap-4">
+      <div className=" flex items-center justify-between container  mx-auto py-12  flex-wrap gap-4 px-20">
         <button className="px-6 py-2 rounded-full text-blue-500 hover:bg-blue-100 transition-colors">
           Customer focused
         </button>
