@@ -6,7 +6,7 @@
 html,
 body {
   font-family: "Inter", serif;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 .shape {
   clip-path: polygon(100% 0, 100% 72%, 0 99%, 0 0);
@@ -16,6 +16,9 @@ body {
 }
 .mobile-shape {
   clip-path: polygon(0 24%, 100% 0%, 100% 84%, 0% 100%);
+}
+.mobile-shape-small {
+  clip-path: polygon(0 50%, 100% 0%, 100% 60%, 0 100%);
 }
 .contact-shape {
   clip-path: polygon(0 0, 100% 48%, 100% 100%, 0% 100%);

@@ -5,10 +5,10 @@ import Footer from "../Components/Footer";
 const MainLayout = () => {
   return (
     <div>
-      <header className="max-w-7xl">
+      <header>
         <Navbar />
       </header>
-      <main>
+      <main className="min-h-[calc(100vh-300px)]">
         <Outlet></Outlet>
       </main>
       <section>

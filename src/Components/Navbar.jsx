@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import clsx from "clsx";
 import { IoClose, IoMenu } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menuBar, setMenuBar] = useState(false);
@@ -21,26 +22,28 @@ const Navbar = () => {
   return (
     <nav
       className={clsx(
-        "w-full fixed top-0 left-0 z-50 px-6 py-4 md:px-12 md:py-6 transition-all",
+        "w-full fixed top-0 left-0 z-50 px-6 py-4 md:px-12 md:py-6 transition-all overflow-hidden",
         scrolling ? "bg-white shadow-md" : "bg-transparent "
       )}
     >
       <div className="flex justify-between items-center">
         {/* Logo */}
-        <div>
-          {scrolling ? (
-            <>
-              <img className="w-32" src={navbarLogoBlue} alt="Logo" />
-            </>
-          ) : (
-            <>
-              <img className="w-32" src={navLogo} alt="Logo" />
-            </>
-          )}
-        </div>
+        <Link to="/">
+          <div>
+            {scrolling ? (
+              <>
+                <img className="w-32" src={navbarLogoBlue} alt="Logo" />
+              </>
+            ) : (
+              <>
+                <img className="w-32" src={navLogo} alt="Logo" />
+              </>
+            )}
+          </div>
+        </Link>
 
         {/* Center Items - Desktop */}
-        <div className="hidden md:flex gap-10 items-center">
+        <div className="hidden lg:flex gap-10 items-center">
           <div className="dropdown dropdown-hover">
             <div
               tabIndex={0}
@@ -63,13 +66,15 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <span className={`${scrolling ? "text-blue-500" : "text-white"}`}>
-            Contact Us
-          </span>
+          <Link to="/service">
+            <span className={`${scrolling ? "text-blue-500" : "text-white"}`}>
+              Service
+            </span>
+          </Link>
           <span className={`${scrolling ? "text-blue-500" : "text-white"}`}>
             About Us
           </span>
-          <div className="dropdown dropdown-hover">
+          <div className="dropdown dropdown-hover z-20">
             <button
               className={`flex items-center gap-2 border px-4 py-2 rounded-full ${
                 scrolling
@@ -83,7 +88,7 @@ const Navbar = () => {
               </span>
               <FiChevronDown className="text-lg" />
             </button>
-            <ul className="dropdown-content menu bg-white text-blue-500 rounded-md shadow-md w-32 p-2">
+            <ul className=" dropdown-content menu bg-white text-blue-500 rounded-md shadow-md w-32 p-2">
               <li>
                 <a>Hindi</a>
               </li>
@@ -96,7 +101,7 @@ const Navbar = () => {
 
         {/* Contact Us Button - Desktop */}
         <button
-          className={`hidden md:flex items-center gap-2 font-semibold border  px-6 py-2 rounded-lg transition-all hover:bg-black hover:text-white ${
+          className={`hidden lg:flex items-center gap-2 font-semibold border  px-6 py-2  transition-all hover:bg-white hover:text-blue-500 ${
             scrolling ? "bg-orange-500 text-white" : "border-white text-white"
           }`}
         >
@@ -106,7 +111,9 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMenuBar(true)}
-          className="md:hidden text-3xl text-black"
+          className={`lg:hidden  text-3xl  cursor-pointer ${
+            scrolling ? "text-blue-500" : "text-white"
+          }`}
         >
           <IoMenu />
         </button>
@@ -119,31 +126,28 @@ const Navbar = () => {
           menuBar && "translate-x-0"
         )}
       >
-        <section className="text-black bg-white flex flex-col absolute left-0 top-0 h-screen p-8 gap-8 w-64">
+        <section className="text-white bg-blue-500 flex flex-col absolute left-0 top-0 h-screen p-8 gap-8 w-64">
           <IoClose
             onClick={() => setMenuBar(false)}
             className="text-4xl cursor-pointer"
           />
           <ul className="flex flex-col gap-6">
-            <li>
-              <a className="hover:text-orange-500 font-semibold" href="#">
+            <Link to="/">
+              <li className="text-white hover:text-orange-500 font-semibold">
                 Home
-              </a>
+              </li>
+            </Link>
+            <li className="text-white hover:text-orange-500 font-semibold">
+              Solutions
             </li>
-            <li>
-              <a className="hover:text-orange-500 font-semibold" href="#">
-                Solutions
-              </a>
-            </li>
-            <li>
-              <a className="hover:text-orange-500 font-semibold" href="#">
-                Contact Us
-              </a>
-            </li>
-            <li>
-              <a className="hover:text-orange-500 font-semibold" href="#">
-                About Us
-              </a>
+            <Link to="/service">
+              
+              <li className="text-white hover:text-orange-500 font-semibold">
+                Service
+              </li>
+            </Link>
+            <li className="text-white hover:text-orange-500 font-semibold">
+              About Us
             </li>
           </ul>
         </section>

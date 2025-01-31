@@ -22,7 +22,7 @@ const Banner = () => {
           </button>
         </div>
       </div>
-      <div className="flex-1 lg:absolute lg:top-0 lg:right-0 -z-10">
+      <div className="flex-1 lg:absolute lg:top-0 lg:right-0 -z-10 ">
         <img
           className="hidden lg:block picture-shape h-full w-full object-cover "
           src="../../public/backgrounds/banner.jpg"
@@ -30,7 +30,12 @@ const Banner = () => {
         />
       </div>
       <img
-        className="mobile-shape block lg:hidden h-full w-full object-cover "
+        className="mobile-shape hidden md:block lg:hidden h-full w-full object-cover "
+        src="../../public/backgrounds/banner.jpg"
+        alt=""
+      />
+      <img
+        className="mobile-shape-small  md:hidden  h-[400px] w-full object-cover "
         src="../../public/backgrounds/banner.jpg"
         alt=""
       />

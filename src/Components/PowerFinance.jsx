@@ -10,7 +10,7 @@ const PowerFinance = () => {
     <section className="container mx-auto px-4 py-16 md:py-24">
       <div className="flex flex-col md:flex-row items-center justify-between gap-20 md:gap-16">
         {/* Left Content */}
-        <div className="w-full md:w-1/2 space-y-4 r">
+        <div className="w-full md:w-1/2 space-y-4 ">
           <p className="text-[#388EF2] font-semibold tracking-wide uppercase text-center md:text-left">
             Powering the future of finance
           </p>

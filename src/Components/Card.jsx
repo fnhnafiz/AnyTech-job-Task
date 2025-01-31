@@ -32,7 +32,7 @@ const Card = () => {
     ],
   };
   return (
-    <div className="slider-container container mx-auto py-16">
+    <div className="slider-container container mx-auto py-16 ">
       <Slider {...settings}>
         {/* First Card */}
         <div className="px-2">
