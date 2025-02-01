@@ -1,5 +1,7 @@
 import Consult from "../../Components/Consult";
+import Implement from "../../Components/Implement";
 import ServiceCardSlider from "../../Components/ServiceCardSlider";
+import Transformation from "../../Components/Transformation";
 import WhatWeDo from "../../Components/WhatWeDo";
 
 const Services = () => {
@@ -28,6 +30,8 @@ const Services = () => {
       <WhatWeDo />
       <ServiceCardSlider />
       <Consult />
+      <Transformation />
+      <Implement />
     </div>
   );
 };
