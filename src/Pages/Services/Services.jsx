@@ -1,6 +1,11 @@
 import Consult from "../../Components/Consult";
 import Implement from "../../Components/Implement";
+import ImplementCardSlider from "../../Components/ImplementCardSlider";
+import Oparate from "../../Components/Oparate";
+import OparateCardSlider from "../../Components/OparateCardSlider";
+import OurSolution from "../../Components/OurSolution";
 import ServiceCardSlider from "../../Components/ServiceCardSlider";
+import ServiceSponserMarque from "../../Components/ServiceSponserMarque";
 import Transformation from "../../Components/Transformation";
 import WhatWeDo from "../../Components/WhatWeDo";
 
@@ -32,6 +37,11 @@ const Services = () => {
       <Consult />
       <Transformation />
       <Implement />
+      <ImplementCardSlider />
+      <Oparate />
+      <OparateCardSlider />
+      <OurSolution />
+      <ServiceSponserMarque />
     </div>
   );
 };
