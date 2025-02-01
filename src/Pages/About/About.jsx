@@ -1,4 +1,5 @@
 import FinancialInstitutions from "../../Components/FinancialInstitutions";
+import OurFounder from "../../Components/OurFounder";
 import OurMission from "../../Components/OurMission";
 import OurStory from "../../Components/OurStory";
 import OurStoryCardSlider from "../../Components/OurStoryCardSlider";
@@ -15,7 +16,7 @@ const About = () => {
         />
 
         <div className="max-w-3xl z-10 flex justify-center items-center ">
-          <div className="space-y-4 pl-12">
+          <div className="space-y-4 pl-6 sm:pl-12">
             <p className="font-bold text-[#02D8E1]">ABOUT US</p>
             <h1 className="text-4xl sm:text-7xl font-bold text-white">
               Paving the way ahead for finance
@@ -37,6 +38,7 @@ const About = () => {
       <FinancialInstitutions />
       <OurMission />
       <OurValues />
+      <OurFounder />
     </div>
   );
 };

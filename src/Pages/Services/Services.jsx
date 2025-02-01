@@ -20,9 +20,9 @@ const Services = () => {
         />
 
         <div className="max-w-3xl z-10 flex justify-center items-center ">
-          <div className="space-y-4 pl-12">
+          <div className="space-y-4 pl-8 sm:pl-0">
             <p className="font-bold text-[#02D8E1]">OUR SERVICES</p>
-            <h1 className="text-4xl sm:text-7xl font-bold text-white">
+            <h1 className="text-4xl md:text-7xl font-bold text-white">
               Reimagining <br /> banking solutions
             </h1>
             <p className="text-lg font-semibold text-white">

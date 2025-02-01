@@ -11,7 +11,7 @@ const PowerFinance = () => {
       <div className="flex flex-col md:flex-row items-center justify-between gap-20 md:gap-16">
         {/* Left Content */}
         <div className="w-full md:w-1/2 space-y-4 ">
-          <p className="text-[#388EF2] font-semibold tracking-wide uppercase text-center md:text-left">
+          <p className="text-[#388EF2] font-semibold tracking-wide uppercase  pl-16 md:pl-0">
             Powering the future of finance
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0B305B] leading-tight pl-16 md:p-0 md:text-left">
@@ -53,7 +53,7 @@ const PowerFinance = () => {
                 />
               </div>
               {/* Bottom right shape */}
-              <div className="absolute bottom-0 right-0 w-72 h-72 md:w-96 md:h-96">
+              <div className="absolute -bottom-10 right-0 w-72 h-72 md:w-96 md:h-96">
                 <img
                   src={bannerSVG1}
                   alt=""

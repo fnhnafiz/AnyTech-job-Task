@@ -6,10 +6,10 @@ import bannerSVG2 from "../../public/frames/story/3.svg";
 const Consult = () => {
   return (
     <section className="container mx-auto px-4 py-16 md:py-24">
-      <div className="flex flex-col md:flex-row sm:items-start  sm:justify-between gap-20 md:gap-16">
+      <div className="flex flex-col lg:flex-row sm:items-start  sm:justify-between gap-20 md:gap-25">
         {/* Left Content */}
-        <div className="w-full md:w-1/2 space-y-4">
-          <p className="text-[#388EF2] font-semibold tracking-wide uppercase text-center sm:text-left md:pl-16 lg:pl-0">
+        <div className="w-full lg:w-1/2 space-y-4">
+          <p className="text-[#388EF2] font-semibold tracking-wide uppercase  pl-16  md:pl-0">
             Taking the First Step
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0B305B] leading-tight pl-16 md:p-0 md:text-left">
@@ -31,7 +31,7 @@ const Consult = () => {
         </div>
 
         {/* Right Image Section */}
-        <div className="w-full md:w-1/2 relative">
+        <div className="w-full lg:w-1/2 relative">
           <div className="relative ">
             {/* Background Shapes Layer */}
             <div className="absolute inset-0 w-full h-full">
@@ -44,7 +44,7 @@ const Consult = () => {
                 />
               </div>
 
-              <div className="absolute -bottom-[30%] right-5 md:-bottom-[70%] md:-right-[5%] lg:right-[2%] lg:-bottom-[40%] w-32 h-52 md:w-52 md:h-96 -z-20">
+              <div className="absolute -bottom-[30%] right-5 md:-bottom-[30%] md:right-[5%] lg:right-[2%] lg:-bottom-[40%] w-32 h-52 md:w-52 md:h-96 -z-20">
                 <img
                   src={bannerSVG2}
                   alt=""

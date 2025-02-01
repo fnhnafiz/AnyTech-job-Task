@@ -8,9 +8,9 @@ const Banner = () => {
       />
 
       <div className="max-w-2xl z-10 flex justify-center items-center">
-        <div className="space-y-8 pl-12">
+        <div className="space-y-8 pl-6 sm:pl-12">
           <h1 className="text-3xl sm:text-7xl font-bold text-white">
-            Embrace the future of finance
+            Embrace the <br /> future of finance
           </h1>
           <p className="text-lg font-semibold text-white">
             Reimagine financial services with AnyTech’s open platform,

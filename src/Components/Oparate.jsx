@@ -7,10 +7,10 @@ import icon1 from "../../public/OparateSection/oparteUserIcon.svg";
 const Oparate = () => {
   return (
     <section className="container mx-auto px-4 py-16 md:py-24">
-      <div className="flex flex-col md:flex-row sm:items-start  sm:justify-between gap-20 md:gap-16">
+      <div className="flex flex-col lg:flex-row sm:items-start  sm:justify-between gap-20 md:gap-16">
         {/* Left Content */}
-        <div className="w-full md:w-1/2 space-y-4">
-          <p className="text-[#388EF2] font-semibold tracking-wide uppercase text-center sm:text-left md:pl-16 lg:pl-0">
+        <div className="w-full lg:w-1/2 space-y-4">
+          <p className="text-[#388EF2] font-semibold tracking-wide uppercase  pl-16 md:pl-0">
             long-term efficiency
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0B305B] leading-tight pl-16 md:p-0 md:text-left">
@@ -33,7 +33,7 @@ const Oparate = () => {
         </div>
 
         {/* Right Image Section */}
-        <div className="w-full md:w-1/2 relative">
+        <div className="w-full lg:w-1/2 relative">
           <div className="relative ">
             {/* Background Shapes Layer */}
             <div className="absolute inset-0 w-full h-full">
