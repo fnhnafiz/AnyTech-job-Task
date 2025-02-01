@@ -27,3 +27,9 @@ body {
 .contact-shape-bg {
   clip-path: polygon(0 0, 100% 48%, 100% 100%, 0% 100%);
 }
+.about-us-shape {
+  clip-path: polygon(0 0, 100% 0, 100% 65%, 0 97%);
+}
+.about-us-orange-shape {
+  clip-path: polygon(0 93%, 100% 50%, 100% 65%, 0 97%);
+}

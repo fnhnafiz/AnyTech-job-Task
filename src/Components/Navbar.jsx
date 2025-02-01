@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <nav
       className={clsx(
-        "w-full fixed top-0 left-0 z-50 px-6 py-4 md:px-12 md:py- transition-all overflow-hidden",
+        "w-full fixed top-0 left-0 z-50 px-6 py-4 md:px-12 transition-all overflow-hidden",
         scrolling ? "bg-white shadow-md" : "bg-transparent "
       )}
     >
@@ -71,9 +71,11 @@ const Navbar = () => {
               Service
             </span>
           </Link>
-          <span className={`${scrolling ? "text-blue-500" : "text-white"}`}>
-            About Us
-          </span>
+          <Link to="/about">
+            <span className={`${scrolling ? "text-blue-500" : "text-white"}`}>
+              About Us
+            </span>
+          </Link>
           <div className="dropdown dropdown-hover z-20">
             <button
               className={`flex items-center gap-2 border px-4 py-2 rounded-full ${
