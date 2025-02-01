@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <nav
       className={clsx(
-        "w-full fixed top-0 left-0 z-50 px-6 py-4 md:px-12 md:py-6 transition-all overflow-hidden",
+        "w-full fixed top-0 left-0 z-50 px-6 py-4 md:px-12 md:py- transition-all overflow-hidden",
         scrolling ? "bg-white shadow-md" : "bg-transparent "
       )}
     >
@@ -141,7 +141,6 @@ const Navbar = () => {
               Solutions
             </li>
             <Link to="/service">
-              
               <li className="text-white hover:text-orange-500 font-semibold">
                 Service
               </li>

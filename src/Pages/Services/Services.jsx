@@ -1,3 +1,4 @@
+import Consult from "../../Components/Consult";
 import ServiceCardSlider from "../../Components/ServiceCardSlider";
 import WhatWeDo from "../../Components/WhatWeDo";
 
@@ -26,6 +27,7 @@ const Services = () => {
       </div>
       <WhatWeDo />
       <ServiceCardSlider />
+      <Consult />
     </div>
   );
 };
