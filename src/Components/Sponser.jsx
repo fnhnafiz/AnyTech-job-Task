@@ -22,7 +22,7 @@ const Sponser = () => {
   var settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 100,
     slidesToShow: 1, // Show 1 logo per slide in small screens
     slidesToScroll: 1,
   };
@@ -54,7 +54,7 @@ const Sponser = () => {
             <img
               src={logo}
               alt={`Sponsor ${index + 1}`}
-              className="h-16 w-40 object-contain"
+              className="h-16 w-52 object-contain"
             />
           </div>
         ))}

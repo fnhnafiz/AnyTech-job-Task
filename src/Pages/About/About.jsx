@@ -11,7 +11,7 @@ const About = () => {
       <div className=" relative shape h-[450px] md:h-[500px] bg-gradient-to-br from-[#00D0FF] via-[#0066FF] to-[#0262E6] pt-28 md:pt-32 overflow-hidden ">
         <img
           className="absolute -top-3 right-0 backdrop-blur-lg w-full -z-10"
-          src="../public/backgrounds/icon.svg"
+          src="/backgrounds/icon.svg"
           alt=""
         />
 

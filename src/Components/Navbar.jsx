@@ -12,6 +12,10 @@ const Navbar = () => {
   const [menuBar, setMenuBar] = useState(false);
   const [scrolling, setScrolling] = useState(false);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolling(window.scrollY > 50);
@@ -22,13 +26,13 @@ const Navbar = () => {
   return (
     <nav
       className={clsx(
-        "w-full fixed top-0 left-0 z-50 px-6 py-4 md:px-12 transition-all overflow-hidden",
+        "w-full fixed top-0 left-0 z-50 px-6 py-4 md:px-12 transition-all ",
         scrolling ? "bg-white shadow-md" : "bg-transparent "
       )}
     >
       <div className="flex justify-between items-center">
         {/* Logo */}
-        <Link to="/">
+        <Link to="/" onClick={scrollToTop}>
           <div>
             {scrolling ? (
               <>
@@ -66,12 +70,12 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <Link to="/service">
+          <Link to="/service" onClick={scrollToTop}>
             <span className={`${scrolling ? "text-blue-500" : "text-white"}`}>
               Service
             </span>
           </Link>
-          <Link to="/about">
+          <Link to="/about" onClick={scrollToTop}>
             <span className={`${scrolling ? "text-blue-500" : "text-white"}`}>
               About Us
             </span>
@@ -130,26 +134,38 @@ const Navbar = () => {
       >
         <section className="text-white bg-blue-500 flex flex-col absolute left-0 top-0 h-screen p-8 gap-8 w-64">
           <IoClose
-            onClick={() => setMenuBar(false)}
+            onClick={() => {
+              scrollToTop();
+              setMenuBar(false);
+            }}
             className="text-4xl cursor-pointer"
           />
           <ul className="flex flex-col gap-6">
             <Link to="/">
-              <li className="text-white hover:text-orange-500 font-semibold">
+              <li
+                onClick={() => {
+                  scrollToTop();
+                  setMenuBar(false);
+                }}
+                className="text-white hover:text-orange-500 font-semibold"
+              >
                 Home
               </li>
             </Link>
-            <li className="text-white hover:text-orange-500 font-semibold">
-              Solutions
-            </li>
+
             <Link to="/service">
-              <li className="text-white hover:text-orange-500 font-semibold">
+              <li
+                onClick={() => setMenuBar(false)}
+                className="text-white hover:text-orange-500 font-semibold"
+              >
                 Service
               </li>
             </Link>
-            <li className="text-white hover:text-orange-500 font-semibold">
-              About Us
-            </li>
+            <Link onClick={() => setMenuBar(false)} to="/about">
+              <li className="text-white hover:text-orange-500 font-semibold">
+                About Us
+              </li>
+            </Link>
           </ul>
         </section>
       </div>

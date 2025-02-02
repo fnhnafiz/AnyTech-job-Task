@@ -1,3 +1,4 @@
+import { Bounce, Fade } from "react-awesome-reveal";
 import bannerSVG1 from "../../public/frames/story/3.svg";
 import customer from "../../public/icons/ServiceSection/serviceSectionImg.png";
 import icon1 from "../../public/icons/ServiceSection/ServiceSectionSVG.svg";
@@ -9,26 +10,34 @@ const WhatWeDo = () => {
       <div className="flex flex-col lg:flex-row sm:items-start justify-between gap-20 md:gap-24">
         {/* Left Content */}
         <div className="w-full lg:w-1/2 space-y-4">
-          <p className="text-[#388EF2] font-semibold tracking-wide uppercase   sm:pl-15 md:pl-0">
-            What We Do
-          </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0B305B] leading-tight pl-16 md:p-0 md:text-left">
-            The power of data
-          </h2>
+          <Fade direction="up">
+            <p className="text-[#388EF2] font-semibold tracking-wide uppercase pl-15 md:pl-0">
+              What We Do
+            </p>
+          </Fade>
+          <Fade direction="up">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0B305B] leading-tight pl-16 md:p-0 md:text-left">
+              The power of data
+            </h2>
+          </Fade>
           <div className="mt-6 hidden md:block space-y-4">
-            <p className="text-gray-700 leading-relaxed  font-bold">
-              In today's rapidly evolving financial landscape, banks and
-              financial institutions face unprecedented challenges. At AnyTech,
-              we understand the critical need for continuous innovation and
-              strategic decision-making in order to thrive.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              With our global perspective and cutting-edge solutions, we are
-              here to help you create unparalleled customer experiences that
-              will set you apart from the competition. Embark on a journey of
-              transformation with AnyTech—one that will redefine what’s possible
-              for your institution.
-            </p>
+            <Fade direction="up">
+              <p className="text-gray-700 leading-relaxed  font-bold">
+                In today's rapidly evolving financial landscape, banks and
+                financial institutions face unprecedented challenges. At
+                AnyTech, we understand the critical need for continuous
+                innovation and strategic decision-making in order to thrive.
+              </p>
+            </Fade>
+            <Fade direction="up">
+              <p className="text-gray-700 leading-relaxed">
+                With our global perspective and cutting-edge solutions, we are
+                here to help you create unparalleled customer experiences that
+                will set you apart from the competition. Embark on a journey of
+                transformation with AnyTech—one that will redefine what’s
+                possible for your institution.
+              </p>
+            </Fade>
           </div>
         </div>
 
@@ -56,36 +65,46 @@ const WhatWeDo = () => {
             </div>
 
             {/* Main Image Container */}
-            <div className="relative z-10 flex justify-center items-center">
-              <img
-                src={customer}
-                alt="Financial Technology"
-                className="w-[80%] object-cover shadow-xl"
-              />
-            </div>
+            <Fade direction="up">
+              <div className="relative z-10 flex justify-center items-center">
+                <img
+                  src={customer}
+                  alt="Financial Technology"
+                  className="w-[80%] object-cover shadow-xl"
+                />
+              </div>
+            </Fade>
 
             {/* Floating Icons */}
             <div className="absolute  md:left-5 top-[45%] z-20 animate-pulse">
-              <img src={icon2} alt="" className="w-22 h-22" />
+              <Bounce>
+                <img src={icon2} alt="" className="w-22 h-22" />
+              </Bounce>
             </div>
             <div className="absolute right-0 top-[10%] z-20 animate-pulse">
-              <img src={icon1} alt="" className="w-32 h-32" />
+              <Bounce>
+                <img src={icon1} alt="" className="w-32 h-32" />
+              </Bounce>
             </div>
           </div>
         </div>
 
         {/* Mobile Content */}
         <div className="mt-6 md:hidden space-y-4">
-          <p className="text-gray-700 leading-relaxed font-bold">
-            AnyTech is revolutionising financial technology by introducing
-            innovative and real-time transaction account processing
-            capabilities, specifically designed for retail financial services.
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            Our modern approach surpasses traditional banking and card
-            processing systems, empowering you with the most advanced technology
-            for lasting success.
-          </p>
+          <Fade direction="up">
+            <p className="text-gray-700 leading-relaxed font-bold">
+              AnyTech is revolutionising financial technology by introducing
+              innovative and real-time transaction account processing
+              capabilities, specifically designed for retail financial services.
+            </p>
+          </Fade>
+          <Fade direction="up">
+            <p className="text-gray-700 leading-relaxed">
+              Our modern approach surpasses traditional banking and card
+              processing systems, empowering you with the most advanced
+              technology for lasting success.
+            </p>
+          </Fade>
         </div>
       </div>
     </section>

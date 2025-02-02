@@ -4,7 +4,7 @@ import customer from "../../public/OurStory/founder.png";
 const OurFounder = () => {
   return (
     <section className="container mx-auto px-4 py-16 md:py-24">
-      <div className="flex flex-col  lg:flex-row sm:items-start  justify-between gap-20 md:gap-32">
+      <div className="flex flex-col items-center lg:flex-row sm:items-start  justify-between gap-20 md:gap-32">
         {/* Left Content */}
         <div className="w-full lg:w-1/2 space-y-4">
           <p className="text-[#388EF2] font-semibold tracking-wide uppercase pl-16 md:pl-0">
@@ -30,7 +30,7 @@ const OurFounder = () => {
         </div>
 
         {/* Right Image Section */}
-        <div className="w-full lg:w-1/2 relative">
+        <div className="w-full lg:w-1/2 relative pl-8">
           <div className="relative aspect-square">
             {/* Background Shapes Layer */}
             <div className="absolute inset-0 w-full h-full">

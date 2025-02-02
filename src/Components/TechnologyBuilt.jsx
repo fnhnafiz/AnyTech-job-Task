@@ -7,12 +7,13 @@ import sliderImage2 from "../../public/CardImage/slider2.jpg";
 import sliderImage3 from "../../public/CardImage/slider3.png";
 import sliderImage4 from "../../public/CardImage/slider4.jpg";
 import CardTitle from "./CardTitle";
+import { Fade } from "react-awesome-reveal";
 
 const TechnologyBuilt = () => {
   var settings = {
-    dots: false,
+    dots: true,
     infinite: true,
-    speed: 500,
+    speed: 200,
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 0,
@@ -23,7 +24,7 @@ const TechnologyBuilt = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: false,
+          dots: true,
         },
       },
       {
@@ -41,7 +42,7 @@ const TechnologyBuilt = () => {
         subHeading="TECHNOLOGY BUILT FOR YOU"
         heading="The future of finance"
       ></SectionTitle>
-      <div className="hidden md:block flex items-center justify-between container  mx-auto py-12  flex-wrap gap-4 px-20">
+      <div className="hidden lg:block lg:flex items-center justify-center  container  mx-auto py-12  flex-wrap gap-4 px-20">
         <button className="px-6 py-2 rounded-full text-blue-500 hover:bg-blue-100 transition-colors">
           Customer focused
         </button>
@@ -57,26 +58,9 @@ const TechnologyBuilt = () => {
       </div>
       <Slider {...settings}>
         <div>
-          <div className="bg-white p-6 sm:p-10 rounded-2xl shadow-lg flex flex-col md:flex-row items-center md:items-start w-full container mx-auto">
+          <div className="bg-white p-6 sm:p-10 rounded-2xl shadow-lg flex flex-col gap-8 lg:flex-row items-center md:items-start w-full container mx-auto">
             {/* Left Side: Text Content */}
-            {/* <div className="w-full md:w-1/2 pr-0 md:pr-8 text-center md:text-left">
-              <p className="text-blue-600 font-semibold text-sm uppercase">
-                Customer Focused
-              </p>
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2">
-                Purpose-built financial services
-              </h2>
-              <p className="font-semibold text-gray-800 mt-4">
-                Elevate customer experience and achieve agile financial product
-                innovation with the world’s first, consumer-centric, real-time
-                transaction account processing and credit limit system.
-              </p>
-              <p className="text-gray-600 mt-4">
-                Experience the advantages of integrated retail financial
-                services technology, real-time analysis of transactional
-                behaviour and product marketing opportunities.
-              </p>
-            </div> */}
+
             <CardTitle
               subHeading="Customer focused"
               heading="Purpose-built financial services"
@@ -86,12 +70,14 @@ Experience the advantages of integrated retail financial services technology, re
             ></CardTitle>
 
             {/* Right Side: Image */}
-            <div className="w-full md:w-1/2 flex justify-center">
-              <img
-                src={sliderImage1}
-                alt="Financial Data"
-                className="rounded-lg shadow-lg w-full max-w-sm md:max-w-full"
-              />
+            <div className="w-full lg:w-1/2 flex justify-center">
+              <Fade direction="up">
+                <img
+                  src={sliderImage1}
+                  alt="Financial Data"
+                  className="rounded-lg shadow-lg w-full max-w-sm md:max-w-full"
+                />
+              </Fade>
             </div>
           </div>
         </div>
@@ -106,7 +92,7 @@ Experience the advantages of integrated retail financial services technology, re
             ></CardTitle>
 
             {/* Right Side: Image */}
-            <div className="w-full md:w-1/2 flex justify-center">
+            <div className="w-full lg:w-1/2 flex justify-center">
               <img
                 src={sliderImage2}
                 alt="Financial Data"

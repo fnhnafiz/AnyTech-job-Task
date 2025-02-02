@@ -29,7 +29,7 @@ const OurStory = () => {
             {/* Background Shapes Layer */}
             <div className="absolute inset-0 w-full h-full">
               {/* Top right shape */}
-              <div className="absolute  -bottom-[5%] md:-top-[10%] left-0 w-32 h-72 md:w-52 md:h-96 transform ">
+              <div className="absolute  -bottom-[45%] md:-top-[10%] left-0 w-32 h-72 md:w-52 md:h-96 transform ">
                 <img
                   src={bannerSVG1}
                   alt=""
@@ -37,7 +37,7 @@ const OurStory = () => {
                 />
               </div>
 
-              <div className="absolute -bottom-[30%] right-5 md:-bottom-[40%] md:right-[5%] lg:right-[2%] lg:-bottom-[40%] w-32 h-52 md:w-52 md:h-96 -z-20">
+              <div className="absolute -bottom-[40%] right-2 md:-bottom-[40%] md:right-[5%] lg:right-[2%] lg:-bottom-[40%] w-32 h-52 md:w-52 md:h-96 -z-20">
                 <img
                   src={bannerSVG2}
                   alt=""
